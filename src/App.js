@@ -1,53 +1,24 @@
 import './App.css';
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types'
 import Homepage from './pages/homepage/Homepage';
+import { Route, Switch } from 'react-router-dom';
 
-class App extends Component {
-  // constructor(props) {
-  //   super(props)
 
-  // }
-
-  // componentWillMount() {
-
-  // }
-
-  // componentDidMount() {
-
-  // }
-
-  // componentWillReceiveProps(nextProps) {
-
-  // }
-
-  // shouldComponentUpdate(nextProps, nextState) {
-
-  // }
-
-  // componentWillUpdate(nextProps, nextState) {
-
-  // }
-
-  // componentDidUpdate(prevProps, prevState) {
-
-  // }
-
-  // componentWillUnmount() {
-
-  // }
-
-  render() {
-    return (
+const App = () => {
+  const Hats = () => {
+    return(
       <div>
-        <Homepage />
+        <h1>HATS PAGE</h1>
       </div>
     )
   }
+  return (
+    <div>
+      <Switch>
+        <Route exact path='/' component={Homepage} />
+        <Route exact path='/shop/hats' component={Hats} />
+      </Switch>
+    </div>
+  )
 }
-
-// App.propTypes = {
-
-// }
 
 export default App
